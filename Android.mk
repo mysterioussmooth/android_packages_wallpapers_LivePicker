@@ -31,6 +31,8 @@ LOCAL_MODULE_PATH := $(TARGET_OUT_ETC)/permissions
 
 LOCAL_SRC_FILES := $(LOCAL_MODULE)
 
+LOCAL_CFLAGS += -fno-strict-aliasing
+
 include $(BUILD_PREBUILT)
 
 ########################
@@ -45,5 +47,7 @@ LOCAL_PACKAGE_NAME := LiveWallpapersPicker
 LOCAL_CERTIFICATE := platform
 
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
+
+LOCAL_CFLAGS += -fno-strict-aliasing
 
 include $(BUILD_PACKAGE)
